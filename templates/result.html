@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      #uploaded-image {
+        width: 800px;
+        height: 800px;
+        align-items: center;
+      }
+      div {
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: beige;
+        width: 100%;
+        height: 100%;
+      }
+
+      #div2 {
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%, -50%);
+        /* background-color: rgb(212, 18, 18); */
+        width: 15%;
+        height: auto;
+      }
+      h1 {
+        font-size: 80px;
+      }
+      p {
+        font-size: 30px;
+      }
+
+      button {
+        position: relative;
+        top: 6px;
+        left:40px;
+        padding: 8px;
+        border-radius: 5px;
+        background-color: white;
+        border: none;
+        height: 40px;
+        z-index: 999;
+      }
+      .img{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        /* background-color: #fff; */
+      }
+      .div3 {
+        position: absolute;
+        top: 70%;
+        left: 48%;
+        width: 400px;
+        height: 350px;
+        /* background-color: #fff; */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="div2">
+        <h1>Result</h1>
+        <p>Gender: {{ gender }}</p>
+        <p>Age: {{ age }}</p>
+        <button><a href="/">Go back</a></button>
+      </div>
+      <div class="div3">
+        <img class="img"
+          id="img1"
+          src="data:image/jpeg;base64,{{ image_data }}"
+          alt="Uploaded Image"
+        />
+      </div>
+    </div>
+  </body>
+</html>
